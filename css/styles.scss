@@ -4,6 +4,7 @@
 @import "../layouts/Variables";
 @import "../layouts/mixin";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 *,
 html {
   margin: 0;
@@ -142,4 +143,8 @@ button {
     color: $primary;
     border: 1px solid $primary;
   }
+}
+.italic{
+  font-family: "Dancing Script", sans-serif;
+  
 }

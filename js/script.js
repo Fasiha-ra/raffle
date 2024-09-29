@@ -9,18 +9,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   function showSection(sectionId) {
     // Hide all sections
-    var sections = document.querySelectorAll('.section');
-    sections.forEach(function (section) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
       section.classList.remove('active');
     });
 
     // Show the selected section
-    var sectionToShow = document.getElementById(sectionId);
+    const sectionToShow = document.getElementById(sectionId);
     sectionToShow.classList.add('active');
+
+    // Update the URL hash without refreshing the page
+    window.location.hash = sectionId;
   }
 
-  // Show the "Home" section by default
-  document.getElementById('home').classList.add('active');
+  // When page loads or refreshes, check the URL hash and show the correct section
+  function handleHashChange() {
+    // Get the current hash value (without the # symbol)
+    const hash = window.location.hash.replace('#', '');
+
+    // If hash is empty, default to 'home'
+    const sectionToShow = hash || 'home';
+
+    // Show the correct section
+    showSection(sectionToShow);
+  }
+
+  // Attach event listener for hash changes (for back/forward navigation)
+  window.addEventListener('hashchange', handleHashChange);
+
+  // Call the function on page load to show the correct section
+  handleHashChange();
 
 
   $('.slides').slick({
@@ -28,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-  //  arrows:true,
+   arrows:false,
     responsive: [
          
           {
