@@ -474,27 +474,44 @@
           </div>
           <div class="formWrap">
             <div class="form">
-              <h2>Get in touch by filling the form below</h2>
+              <h2 class="h2">Get in touch by filling the form below</h2>
               <div class="formHolder">
-                <div class="field">
-                  <label for="">Name*</label>
-                  <input type="text" placeholder="Enter Name">
+                <div class="flex">
+                  <div class="field">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" placeholder="Enter Name">
+                    <small class="error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="Enter Email">
+                    <small class="error"></small>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="">Name*</label>
-                  <input type="text" placeholder="Enter Name">
+                <div class="flex">
+                  <div class="field">
+                    <label for="phone">Phone No*</label>
+                    <input type="number" id="phone" placeholder="Enter Phone No">
+                    <small class="error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="subject">Subject*</label>
+                    <input type="text" id="subject" placeholder="Enter Subject">
+                    <small class="error"></small>
+                  </div>
                 </div>
-                <div class="field">
-                  <label for="">Name*</label>
-                  <input type="text" placeholder="Enter Name">
+                <div class="field textarea">
+                  <label for="message">Message*</label>
+                  <textarea id="message" placeholder="Enter Message"></textarea>
+                  <small class="error"></small>
                 </div>
-                <div class="field">
-                  <label for="">Name*</label>
-                  <input type="text" placeholder="Enter Name">
-                </div>
+                <button class="btn" id="submitBtn">Submit</button>
               </div>
             </div>
-            <div class="map"></div>
+            
+            <div class="map">
+              <img src="/images/home/about.jpg" alt="">
+            </div>
           </div>
       </div>
      </div>

@@ -1163,11 +1163,61 @@ footer .terms {
   display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+  flex-direction: column;
 }
-.contact .connect .formWrap .form h2 {
+@media (min-width: 992px) {
+  .contact .connect .formWrap {
+    flex-direction: row;
+  }
+}
+.contact .connect .formWrap .form .h2 {
   color: #274488;
   font-weight: 500;
+  margin-bottom: 20px;
+}
+.contact .connect .formWrap .form .formHolder .field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .contact .connect .formWrap .form .formHolder .field {
+    margin-bottom: 20px;
+  }
+}
+.contact .connect .formWrap .form .formHolder .field .error-border {
+  border-color: red;
+}
+.contact .connect .formWrap .form .formHolder .field .error {
+  color: red;
+  font-size: 12px;
+}
+.contact .connect .formWrap .form .formHolder .field label {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 19px;
+}
+.contact .connect .formWrap .form .formHolder .field input, .contact .connect .formWrap .form .formHolder .field textarea {
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid #DCE1EC;
+  outline: none;
+}
+.contact .connect .formWrap .form .formHolder .field textarea {
+  resize: none;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .contact .connect .formWrap .form .formHolder .flex {
+    display: flex;
+    gap: 10px;
+  }
+}
+.contact .connect .formWrap .map img {
+  width: 400px;
+  height: 400px;
 }
 .contact .faqs {
   margin-bottom: 30px;
