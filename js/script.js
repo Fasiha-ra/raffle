@@ -70,3 +70,22 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
       
   });
+
+
+
+  document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+      const parent = item.parentElement;
+      const toggle = item.querySelector('.faq-toggle');
+      
+      // Toggle active state
+      parent.classList.toggle('active');
+      
+      // Switch between + and - symbols
+      if (parent.classList.contains('active')) {
+        toggle.textContent = '-';
+      } else {
+        toggle.textContent = '+';
+      }
+    });
+  });

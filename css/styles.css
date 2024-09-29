@@ -651,6 +651,137 @@ footer .terms {
   max-width: 500px;
   margin-top: 70px;
 }
+.admissions .procedure {
+  margin-bottom: 30px;
+}
+@media (min-width: 929px) {
+  .admissions .procedure {
+    margin-bottom: 50px;
+  }
+}
+.admissions .procedure h2 {
+  font-weight: 500;
+  color: #274488;
+  margin-bottom: 30px;
+}
+.admissions .procedure .container .procedure {
+  font-size: 15px;
+  line-height: 25px;
+}
+@media (min-width: 992px) {
+  .admissions .procedure .container .procedure {
+    font-size: 17px;
+    line-height: 28px;
+  }
+}
+.admissions .procedure .container .procedure .title {
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .admissions .procedure .container .procedure .title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+}
+.admissions .procedure .container .procedure p {
+  margin-bottom: 18px;
+}
+@media (min-width: 992px) {
+  .admissions .procedure .container .procedure p {
+    margin-bottom: 30px;
+  }
+}
+.admissions .procedure .container .procedure span {
+  display: block;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 30px;
+}
+.admissions .procedure .container .enroll img {
+  margin: 0 auto 20px;
+}
+.admissions .procedure .container .registration {
+  margin-bottom: 20px;
+}
+.admissions .procedure .container .registration .cards {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.admissions .procedure .container .registration .cards .card {
+  width: 100%;
+  max-width: 380px;
+  min-height: 230px;
+  background: #274488;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 20px;
+}
+.admissions .procedure .container .registration .cards .card .title {
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .admissions .procedure .container .registration .cards .card .title {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+.admissions .procedure .container .registration .cards .card p {
+  margin-bottom: 20px;
+}
+.admissions .procedure .container .test .faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.admissions .procedure .container .test .faq-item .faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+.admissions .procedure .container .test .faq-item .faq-question h3 {
+  margin: 0;
+  color: #274488;
+  font-size: 18px;
+}
+.admissions .procedure .container .test .faq-item .faq-question .faq-toggle {
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.admissions .procedure .container .test .faq-item .faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+}
+.admissions .procedure .container .test .faq-item .faq-answer p {
+  margin: 0;
+  color: #274488;
+  font-size: 16px;
+}
+.admissions .procedure .container .test .faq-item.active .faq-answer {
+  display: block;
+}
+.admissions .procedure .container .test .faq-item.active .faq-question .faq-toggle {
+  content: "-";
+  transform: rotate(180deg);
+}
 
 .career .hero {
   position: relative;
@@ -736,7 +867,7 @@ html {
 
 body {
   font: 16px/20px "Sora", sans-serif;
-  color: #231f20;
+  color: #171717;
   margin: 0;
   padding: 0;
   background: #fff;
