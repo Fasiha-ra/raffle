@@ -113,116 +113,121 @@ document.querySelectorAll(".faq-question").forEach((item) => {
   });
 });
 
-
 // Function to show error
 function showError(field, message) {
   const errorElement = field.nextElementSibling;
   errorElement.innerText = message;
-  field.classList.add('error-border');
+  field.classList.add("error-border");
 }
 
 // Function to clear error
 function clearError(field) {
   const errorElement = field.nextElementSibling;
-  errorElement.innerText = '';
-  field.classList.remove('error-border');
+  errorElement.innerText = "";
+  field.classList.remove("error-border");
 }
 
 // Function to clear error when user types again
 function clearErrorOnInput(field) {
-  field.addEventListener('input', function () {
+  field.addEventListener("input", function () {
     clearError(field);
   });
 }
 
 // Add input event listeners to all fields
-const fields = [document.getElementById('name'), document.getElementById('email'),
-                document.getElementById('phone'), document.getElementById('subject'),
-                document.getElementById('message')];
+const fields = [
+  document.getElementById("name"),
+  document.getElementById("email"),
+  document.getElementById("phone"),
+  document.getElementById("subject"),
+  document.getElementById("message"),
+];
 
-fields.forEach(field => clearErrorOnInput(field));
+fields.forEach((field) => clearErrorOnInput(field));
 
 // Handling form submission and validation
-document.getElementById('submitBtn').addEventListener('click', function (event) {
-  event.preventDefault(); // Prevent form from submitting
+document
+  .getElementById("submitBtn")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent form from submitting
 
-  // Get form field values
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
+    // Get form field values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-  // Simple validation
-  let isValid = true;
+    // Simple validation
+    let isValid = true;
 
-  // Name validation
-  const nameField = document.getElementById('name');
-  if (name === '') {
-    showError(nameField, 'Name is required.');
-    isValid = false;
-  } else {
-    clearError(nameField);
-  }
+    // Name validation
+    const nameField = document.getElementById("name");
+    if (name === "") {
+      showError(nameField, "Name is required.");
+      isValid = false;
+    } else {
+      clearError(nameField);
+    }
 
-  // Email validation
-  const emailField = document.getElementById('email');
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (email === '') {
-    showError(emailField, 'Email is required.');
-    isValid = false;
-  } else if (!emailPattern.test(email)) {
-    showError(emailField, 'Enter a valid email.');
-    isValid = false;
-  } else {
-    clearError(emailField);
-  }
+    // Email validation
+    const emailField = document.getElementById("email");
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (email === "") {
+      showError(emailField, "Email is required.");
+      isValid = false;
+    } else if (!emailPattern.test(email)) {
+      showError(emailField, "Enter a valid email.");
+      isValid = false;
+    } else {
+      clearError(emailField);
+    }
 
-  // Phone validation
-  const phoneField = document.getElementById('phone');
-  if (phone === '') {
-    showError(phoneField, 'Phone number is required.');
-    isValid = false;
-  } else if (phone.length < 10) {
-    showError(phoneField, 'Enter a valid phone number.');
-    isValid = false;
-  } else {
-    clearError(phoneField);
-  }
+    // Phone validation
+    const phoneField = document.getElementById("phone");
+    if (phone === "") {
+      showError(phoneField, "Phone number is required.");
+      isValid = false;
+    } else if (phone.length < 10) {
+      showError(phoneField, "Enter a valid phone number.");
+      isValid = false;
+    } else {
+      clearError(phoneField);
+    }
 
-  // Subject validation
-  const subjectField = document.getElementById('subject');
-  if (subject === '') {
-    showError(subjectField, 'Subject is required.');
-    isValid = false;
-  } else {
-    clearError(subjectField);
-  }
+    // Subject validation
+    const subjectField = document.getElementById("subject");
+    if (subject === "") {
+      showError(subjectField, "Subject is required.");
+      isValid = false;
+    } else {
+      clearError(subjectField);
+    }
 
-  // Message validation
-  const messageField = document.getElementById('message');
-  if (message === '') {
-    showError(messageField, 'Message is required.');
-    isValid = false;
-  } else {
-    clearError(messageField);
-  }
+    // Message validation
+    const messageField = document.getElementById("message");
+    if (message === "") {
+      showError(messageField, "Message is required.");
+      isValid = false;
+    } else {
+      clearError(messageField);
+    }
 
-  // If form is valid, show data in the console
-  if (isValid) {
-    const formData = {
-      name: name,
-      email: email,
-      phone: phone,
-      subject: subject,
-      message: message
-    };
-    console.log('Form Data:', formData);
-    alert('Form submitted successfully!');
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('phone').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('message').value = '';
-  }
-});
+    // If form is valid, show data in the console
+    if (isValid) {
+      const formData = {
+        name: name,
+        email: email,
+        phone: phone,
+        subject: subject,
+        message: message,
+      };
+      console.log("Form Data:", formData);
+      alert("Form submitted successfully!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("phone").value = "";
+      document.getElementById("subject").value = "";
+      document.getElementById("message").value = "";
+    }
+  });

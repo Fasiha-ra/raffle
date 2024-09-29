@@ -575,36 +575,36 @@ footer .terms {
   background: transparent;
   border: none;
 }
-.home .slider {
+.home .sliderWrap {
   margin-bottom: 30px;
 }
 @media (min-width: 992px) {
-  .home .slider {
+  .home .sliderWrap {
     margin-bottom: 50px;
   }
 }
-.home .slider .h2 {
+.home .sliderWrap .h2 {
   display: block;
   text-align: center;
   color: #274488;
   margin-bottom: 40px;
 }
-.home .slider .slides {
+.home .sliderWrap .slides {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home .slider .slide {
+.home .sliderWrap .slide {
   margin: 0 20px;
 }
-.home .slider .slide img {
+.home .sliderWrap .slide img {
   margin: 0 auto;
   width: 100%;
   max-width: 150px;
   height: 150px;
 }
 @media (min-width: 992px) {
-  .home .slider .slide img {
+  .home .sliderWrap .slide img {
     max-width: 200px;
     height: 200px;
   }
@@ -1004,6 +1004,161 @@ footer .terms {
   transform: rotate(180deg);
 }
 
+#instructor .hero {
+  position: relative;
+  overflow: hidden;
+  background-image: url("/images/instructor/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  #instructor .hero {
+    margin-bottom: 50px;
+  }
+}
+#instructor .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#instructor .hero .container {
+  position: relative;
+}
+@media (min-width: 768px) {
+  #instructor .hero .container {
+    margin: 0;
+    padding: 0 30px;
+  }
+}
+#instructor .hero .container .heading {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 70px;
+}
+#instructor .introduction {
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  #instructor .introduction {
+    margin-bottom: 50px;
+  }
+}
+#instructor .introduction h2 {
+  font-weight: 500;
+  color: #274488;
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  #instructor .introduction h2 {
+    margin-bottom: 30px;
+  }
+}
+#instructor .introduction strong {
+  display: block;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  #instructor .introduction strong {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+#instructor .introduction .teacherMsg {
+  max-width: 700px;
+  width: 100%;
+  background-color: #DCE1EC;
+  padding: 30px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  #instructor .introduction .teacherMsg::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #274488;
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+  }
+}
+#instructor .introduction .teacherMsg h3 {
+  line-height: 35px;
+  font-weight: 400;
+}
+#instructor .instructorDetails {
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  #instructor .instructorDetails {
+    margin-bottom: 50px;
+  }
+}
+#instructor .instructorDetails .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+@media (min-width: 576px) {
+  #instructor .instructorDetails .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  #instructor .instructorDetails .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  #instructor .instructorDetails .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#instructor .instructorDetails .container .card {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #DCE1EC;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+#instructor .instructorDetails .container .card:hover {
+  box-shadow: 0px 0px 30px 0px rgba(32, 32, 32, 0.15);
+}
+#instructor .instructorDetails .container .card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+#instructor .instructorDetails .container .card span {
+  display: block;
+}
+#instructor .instructorDetails .container .card .name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+}
+#instructor .instructorDetails .container .card .designation {
+  font-size: 15px;
+  line-height: 19px;
+}
+
 .career .hero {
   position: relative;
   overflow: hidden;
@@ -1199,7 +1354,8 @@ footer .terms {
   font-size: 15px;
   line-height: 19px;
 }
-.contact .connect .formWrap .form .formHolder .field input, .contact .connect .formWrap .form .formHolder .field textarea {
+.contact .connect .formWrap .form .formHolder .field input,
+.contact .connect .formWrap .form .formHolder .field textarea {
   padding: 10px 20px;
   width: 100%;
   border: 1px solid #DCE1EC;

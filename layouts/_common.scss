@@ -335,7 +335,7 @@
       }
     }
   }
-  .slider {
+  .sliderWrap {
     margin-bottom: 30px;
     @media (min-width: 992px) {
       margin-bottom: 50px;
@@ -760,6 +760,151 @@
   }
 }
 // Admission End
+// Instructor Start
+#instructor {
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background-image: url("/images/instructor/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: $white;
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      margin-bottom: 50px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      // z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      // z-index: 1;
+
+      @media (min-width: 768px) {
+        margin: 0;
+        padding: 0 30px;
+      }
+      .heading {
+        width: 100%;
+        max-width: 500px;
+        margin-top: 70px;
+      }
+    }
+  }
+  .introduction {
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-weight: 500;
+      color: $primary;
+      margin-bottom: 15px;
+      @media (min-width:992px){
+        margin-bottom: 30px;
+      }
+    }
+    strong {
+      display: block;
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      @media (min-width:992px){
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+    .teacherMsg {
+      max-width: 700px;
+      width: 100%;
+      background-color: $border;
+      padding: 30px;
+      position: relative;
+     @media (min-width:768px){
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: $primary;
+        top: -20px;
+        right: -20px;
+        z-index: -1;
+      }
+     }
+      h3{
+        line-height: 35px;
+        font-weight: 400;
+      }
+    }
+  }
+  .instructorDetails{
+    margin-bottom: 30px;
+    @media (min-width: 992px) {
+      margin-bottom: 50px;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      @media (min-width:576px){
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width:768px){
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (min-width:992px){
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .card{
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid $border;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+          box-shadow: 0px 0px 30px 0px rgba(32, 32,32, 0.15);
+        }
+        img{
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          margin: 0 auto 20px;
+         
+        }
+        span{
+          display: block;
+        }
+        .name{
+          font-weight: 600;
+          margin-bottom: 10px;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .designation{
+          font-size: 15px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
+// Instructor End
 //Career Start
 .career {
   .hero {
@@ -915,9 +1060,9 @@
       display: flex;
       gap: 20px;
       justify-content: center;
-      align-items:center;
+      align-items: center;
       flex-direction: column;
-      @media (min-width:992px){
+      @media (min-width: 992px) {
         flex-direction: row;
       }
       .form {
@@ -932,7 +1077,7 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 10px;
-            @media (min-width:992px){
+            @media (min-width: 992px) {
               margin-bottom: 20px;
             }
             .error-border {
@@ -942,26 +1087,27 @@
               color: red;
               font-size: 12px;
             }
-            label{
+            label {
               margin-bottom: 10px;
               font-size: 15px;
               line-height: 19px;
             }
-            input, textarea{
-              padding:10px 20px;
+            input,
+            textarea {
+              padding: 10px 20px;
               width: 100%;
               border: 1px solid $border;
               outline: none;
             }
-            textarea{
+            textarea {
               resize: none;
               height: 100px;
             }
           }
-          .flex{
-            @media (min-width:768px){
+          .flex {
+            @media (min-width: 768px) {
               display: flex;
-            gap: 10px;
+              gap: 10px;
             }
           }
         }
