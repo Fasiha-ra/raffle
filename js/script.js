@@ -231,3 +231,28 @@ document
       document.getElementById("message").value = "";
     }
   });
+
+
+  const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeModal = document.getElementsByClassName('close')[0];
+
+// Open modal with clicked image
+document.querySelectorAll('.gallery-img').forEach(img => {
+  img.addEventListener('click', function () {
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+  });
+});
+
+// Close modal on click of close button
+closeModal.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+// Close modal if clicked outside the image
+modal.addEventListener('click', function (e) {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
