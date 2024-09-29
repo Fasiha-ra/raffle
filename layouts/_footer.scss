@@ -1,0 +1,86 @@
+@import "../layouts/Variables";
+footer {
+  background-color: $primary;
+  color: $white;
+  padding: 50px 0 20px;
+  a {
+    color: $white;
+  }
+  .title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    @media (min-width: 768px) {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: safe;
+    }
+    .left {
+     
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 20px;
+      padding: 10px;
+
+      flex-wrap: wrap;
+      @media (min-width: 768px) {
+        border-right: 1px solid $white;
+        flex-wrap: nowrap;
+        width: 65%;
+      }
+
+      .logo {
+        width: 100%;
+        max-width: 150px;
+        min-height: 126px;
+      }
+      .list {
+        li {
+          margin-bottom: 20px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+      .icon {
+        ul {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+    .right {
+        @media (min-width:768px){
+            width: 35%;
+        }
+     
+
+      .imgs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+       img{
+        max-width: 150px;
+        width: 100%;
+       }
+      }
+    }
+  }
+  .terms{
+    padding-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 16px;
+    flex-wrap: wrap;
+  }
+}

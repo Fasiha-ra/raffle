@@ -1,0 +1,145 @@
+@import "../layouts/header";
+@import "../layouts/footer";
+@import "../layouts/common";
+@import "../layouts/Variables";
+@import "../layouts/mixin";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/20px "Sora", sans-serif;
+  color: #231f20;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+
+  position: relative;
+}
+
+.container {
+  max-width: 1250px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+.h1,
+h1 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  @media (min-width: 992px) {
+    font-size: 65px;
+    line-height: 69px;
+  }
+}
+.h2,
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @media (min-width: 992px) {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="submit"] {
+  cursor: pointer;
+}
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+button {
+  min-width: 130px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px 12px;
+}
+.btn {
+  color: $primary;
+  text-transform: uppercase;
+  border: 1px solid $primary;
+  background-color: $white;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}
+.btn2 {
+  color: $white;
+  text-transform: uppercase;
+  border: 1px solid $white;
+  background-color: $primary;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $white;
+    color: $primary;
+    border: 1px solid $primary;
+  }
+}
