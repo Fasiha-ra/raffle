@@ -1528,8 +1528,14 @@ footer .terms {
     gap: 10px;
   }
 }
+.contact .connect .formWrap .map {
+  padding: 0 10px;
+  width: 100%;
+  max-width: 500px;
+}
 .contact .connect .formWrap .map iframe {
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
   height: 400px;
 }
 .contact .faqs {

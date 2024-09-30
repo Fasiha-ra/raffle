@@ -1271,8 +1271,12 @@
         }
       }
       .map {
+        padding:0 10px;
+width: 100%;
+max-width: 500px;
         iframe {
-          width: 400px;
+          width: 100%;
+          max-width: 500px;
           height: 400px;
         }
         // img {
