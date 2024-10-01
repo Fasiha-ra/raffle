@@ -610,6 +610,9 @@ footer .terms {
   }
 }
 
+#about {
+  overflow: hidden;
+}
 #about .hero {
   position: relative;
   overflow: hidden;
@@ -1047,13 +1050,24 @@ footer .terms {
 }
 #gallery .cardImgs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
-  margin-bottom: 30px;
+  margin: 0 10px 30px;
+}
+@media (min-width: 576px) {
+  #gallery .cardImgs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  #gallery .cardImgs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (min-width: 992px) {
   #gallery .cardImgs {
     margin-bottom: 50px;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 #gallery .cardImgs img {

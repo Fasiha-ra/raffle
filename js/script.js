@@ -6,7 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.classList.toggle("active"); // Toggle the cross icon
     nav.classList.toggle("active"); // Show or hide the nav links
   });
+  const navItems = document.querySelectorAll('.nav-item');
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // Remove 'nav-open' class to close the menu
+    menuIcon.classList.remove("active");
+    nav.classList.remove('active');
+  });
 });
+});
+
 function showSection(sectionId) {
   // Hide all sections
   const sections = document.querySelectorAll(".section");
